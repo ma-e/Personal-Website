@@ -62,3 +62,4 @@ ehthumbs.db
 Thumbs.db
 
 *.sql
+secret_key.py
