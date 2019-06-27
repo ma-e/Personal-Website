@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<!-- -->
+
+<head>
+  <title>E MA</title> 
+  <!-- Link in css file -->
+  <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/style.css'%}">
+  <!-- link in lightbox file-->
+  <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/lightbox.min.css' %}">
+  <!-- java script ligtbox file-->
+  <script type="text/javascript" src="{% static 'personal/js/lightbox-plus-jquery.min.js' %}"></script>
+  <meta charset="utf-8" /> 
+  
+
+  <!-- header section --> 
+  <div class ="header">
+    <a href="#contact">Contact</a>
+  </div>
+
+</head>
+
+
+<body class = "body" >
+
+<div class="pyro">
+  <div class="before"></div>
+  <div class="after"></div>
+</div>
+
+
+<!-- Menu section -->
+ <div class="dropdown">
+  <button class="dropbtn element"> Menu +  </button>
+   <div class="dropdown-content element" style="z-index:1">
+    <ul><font size="3" face="Verdana">
+      <a  href='/#mainpage'> Main </a>
+      <!-- <a  href='/#aboutme'>About Me</a> -->
+      <a  href='/#education'>Education </a>
+      <a  href='/#projects'>Recent Projects </a>
+      <a  href='/#experience'>Experience</a>
+      <a  href='/#painting'>Paintings </a>
+      <a  href='/#photography'>Photography </a>
+      <a  href='/#contact'>Contact </a>
+    </font>
+    </ul>
+  </div>
+</div>
+
+<!-- main page section -->
+<center>
+  <div id = "mainpage" style = " background: url(static/personal/img/backGround1.png) 50% 0 no-repeat fixed; 
+                                 height:100%; 
+                                 margin-top: 0px; 
+                                 margin-bottom: 150px; 
+                                 font-size: 30px ">
+    <br><br>
+    <h1>E Ma is here</h1>
+     <br><br>
+     <br><br>
+  </div>
+</center>
+
+
+
+<!-- About me section -->
+<!-- <center>
+  <div class="container" id="aboutme" style="height:100%; background-color:white; width:80%; margin-top: 0px;">
+    <h1> About Me </h1>
+    <p align="left"><font size="5" >My name is E MA, I was born in Kunming, China in 1992. </font></p>
+    <p align="left"><font size="5" >I received my bacholar's degree in the field of business management at Southwest University in Chongqing, China in 2014. I have always been attracted to the various cultures around the world. That's why after school, i went to Thailand for one year cultural exchange and then I moved to Chicago illinois in the United States in March 2015. I was living with my host parents as a exchange student in the first year. After we relocated to San Francisco, I began attending classes at City College of San Francisco for my English skills. My host parents are working in the Computer Science field which give me a introduction about this area. After much consideration, I decided to pursue a CS degree. In August 2017, I moved to Las Vegas New Mexico to pursue my master's degree in Computer Science at New Mexico Highlands University.</font></p>
+    <p align="left"><font size="5" face="normal">Right now, I am half way to compeleting the master program at NMHU. Besides studying in CS, i have hobbies such as painting and photography, you will see some of my works in the other sections.</font></p>   
+  </div>
+</center> -->
+
+<!-- Education section -->
+<center>
+    <br><br>
+    <br><br>
+  <div class="container" id="education" style="height:100%; background-color:white; width:90%;">
+  <h1>Education </h1>
+  <table>
+  <tr>
+    <th>School</th>
+    <th>Degree</th> 
+    <th>Field of study</th>
+    <th>Grade</th>
+  </tr>
+  <tr>
+    <td>New Mexico Highlands University</td>
+    <td>Master's</td>
+    <td>Computer Science</td>
+    <td>4.0</td>
+  </tr>
+  <tr>
+    <td>Southwest University</td>
+    <td>Bachalor's</td>
+    <td>Business Management</td>
+    <td>3.7</td>
+  </tr>
+</table>
+</center>
+<br>
+
+<!-- Projects section-->
+<center>
+  <div class="container" id="projects" style="height:100%; background-color:white; width:90%； margin-top: 100px">
+  <h1>Recent Projects</h1>
+  <table>
+    <tr>
+      <th>Project</th> 
+      <th>Explaination</th>
+      <th>Url</th>
+    </tr>
+    <tr>
+      <td>Personal website</td>
+      <td>Django,HTML5,CSS</td>
+      <td><a href = "http://www.maeema.com">www.maeema.com</a></td>
+    </tr>
+    <tr>
+      <td>MAE web application</td>
+      <td>Python,Django,Bootsctrap,Javascript,Amazon lex</td>
+      <td><a href = "http://butterfly.maeema.com/" >butterfly.maeema.com<br/><a href = "http://hedgehog.maeema.com/" >hedgehog.maeema.com</a></a></td>
+    </tr>
+    <!-- <tr>
+      <td>React todo list</td>
+      <td>React,javascript,HTML,CSS,Google Firebase</td>
+      <td>......</td>
+    </tr> -->
+  </table>
+</center>
+  <br><br>
+
+<!-- Experience section-->
+<center>
+  <div class="container" id="experience" style="height:100%; background-color:white; width:90%； margin-top: 100px">
+  <h1>Experience</h1>
+  <table>
+    <tr>
+      <th>Title</th> 
+      <th>Company</th>
+      <th>Start</th>
+      <th>End</th>
+    </tr>
+    <tr>
+      <td>Software Developer Intern</td>
+      <td>DisplayRide Inc</td>
+      <td>May 2019</td>
+      <td>Present</td>
+    </tr> 
+    <tr>
+      <td>Graduate Research Assistant</td>
+      <td>New Mexico Highlands University</td>
+      <td>August 2017</td>
+      <td>May 2019</td>
+    </tr>  
+    <tr>
+      <td>Software Engineer Intern</td>
+      <td>McKlein Company LLC</td>
+      <td>December 2018</td>
+      <td>March 2019</td>
+    </tr>   
+    <!-- <tr>
+      <td>Mandarin Teacher</td>
+      <td>Padoongrasdra School</td>
+      <td>March 2013</td>
+      <td>March 2014</td>
+    </tr> -->
+  </table>
+</center>
+  <br><br>
+
+<!-- Painting section-->
+<center>
+  <div id="painting" class="gallery" style="height: 100%; background-color:lightgray; width:90%;">
+  <h1 style="font-variant: small-caps">Paintings</h1>
+  <a href="{% static 'personal/img/p1_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p1.jpg' %}"></a>
+  <a href="{% static 'personal/img/p2_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p2.jpg' %}"></a>
+  <a href="{% static 'personal/img/p3_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p3.jpg' %}"></a>
+  <a href="{% static 'personal/img/p4_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p4.jpg' %}"></a>
+  <a href="{% static 'personal/img/p5_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p5.jpg' %}"></a>
+  <a href="{% static 'personal/img/p6_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p6.jpg' %}"></a>
+  <a href="{% static 'personal/img/p7_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p7.jpg' %}"></a>
+  <a href="{% static 'personal/img/p8_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p8.jpg' %}"></a>
+</center>
+
+<!-- Photography section (thinking about videos) -->
+<center>
+  <div id="photography" class="gallery" style="height:100%; background-color:lightgray; width:90%;">
+  <h1> Photography </h1>
+  <a href="{% static 'personal/img/ph1.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph1.jpg' %}"></a>
+  <a href="{% static 'personal/img/ph2.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph2.jpg' %}"></a>
+  <a href="{% static 'personal/img/ph3.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph3.jpg' %}"></a>
+  <a href="{% static 'personal/img/ph4.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph4.jpg' %}"></a>
+  <a href="{% static 'personal/img/ph5.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph5.jpg' %}"></a>
+  <a href="{% static 'personal/img/ph6.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph6.jpg' %}"></a>
+  <a href="{% static 'personal/img/ph7.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph7.jpg' %}"></a>
+  <br><br>
+</center>
+
+<!-- Contact section -->
+<center>
+  <div id="contact" style="height:100%; background-color:lightgray; width:90%">
+  <h1>Contact</h1>
+  <p>If you would like to contact me, please email me!</p>
+  <p>Email: ema@live.nmhu.edu</p> 
+</center>
+
+<!-- Footer section -->
+<center>
+  <footer>
+    <div style='margin-left: 90px'>
+      <p><a href="https://www.instagram.com/smart_ema/?hl=en" target="#contact">Instagram</a> | <a href="https://www.linkedin.com/in/e-ma-050512162/" target="blank">LinkedIn</a> | <a href="https://www.youtube.com/channel/UCJD_WH53eKLmkzipr_9VF8g/" target="blank">Youtube</a> | <a href="https://plus.google.com/u/0/116287196993279085815" target="blank">Google+</a></p>
+    </div>
+  </footer> 
+</center>
+
+</body>
+</html>
+
