@@ -63,3 +63,4 @@ Thumbs.db
 
 *.sql
 secret_key.py
+*.sqlite3
