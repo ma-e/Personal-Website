@@ -8,5 +8,16 @@
 *.sqlite
 *.sql
 secret_key.py
+*.sqlite*.jpg
+*.gif
+*.png
+*.com
+*.exe
+*.log
+*.sql
+*.sqlite
+*.sql
+secret_key.py
 *.sqlite3
 README.md
+
