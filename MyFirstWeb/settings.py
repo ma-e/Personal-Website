@@ -52,6 +52,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'cn_vson',
     'personal',
     'django.contrib.admin',
     'django.contrib.auth',
