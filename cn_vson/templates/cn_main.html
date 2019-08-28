@@ -4,7 +4,7 @@
 <!-- -->
 
 <head>
-  <title>E MA</title> 
+  <title>米线儿黛西</title> 
   <!-- Link in css file -->
   <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/style.css'%}">
   <!-- link in lightbox file-->
@@ -34,7 +34,7 @@
     <ul>
       <a  href='#cn_mainpage'> 主页 </a>
       <a  href='#bio'>个人档 </a>
-      <a  href='/#projects'>作品集</a>
+      <a  href='#portfolio'>作品集</a>
       <a  href='/#experience'>博文</a>
       <a  href='/#contact'>留言 </a>
     </ul>
@@ -42,19 +42,21 @@
 </div>
 
 <!-- main page section -->
-<div class = "section typeWriter" id = "cn_mainpage">
-  <h1>时代总会淘汰很多东西 譬如 不思进取</h1>
+<div class = "section typeWriter main" id = "cn_mainpage">
+  
+  <h1>我不是天才，我只是米线儿。</h1>
+  <h6>米线女我</h6>
 </div>
 
 
 
 
-  <div class = "section" id="bio">
-    <p>个人档</p>
+  <div class = "section bio" id="bio">
+    <h2>个人档</h2>
     <div class="left" style = "margin-top:30px; display:block;width:50%;float:left"> 
       <p>食素</p>
-      <p>控糖 控塑料</p>
-      <p>会写码的里面会画画会摄影会跳舞的</p> 
+      <p>控糖 控塑胶材料</p>
+      <p>会写码的里面会画画会拍片会跳舞的</p> 
       <p>昆明 > 彭世洛 > 芝加哥 > 矽谷</p> 
     </div>
 
@@ -65,55 +67,26 @@
 
 
 
-  <div class = "section" id="projects">
-  <h1>Portfolio</h1>
-  <table>
-    <tr>
-      <th>Project</th> 
-      <th>Explaination</th>
-      <th>Url</th>
-    </tr>
-    <tr>
-      <td>Personal website</td>
-      <td>Django,HTML5,CSS</td>
-      <td><a href = "http://www.maeema.com">www.maeema.com</a></td>
-    </tr>
-    <tr>
-      <td>MAE web application</td>
-      <td>Python,Django,Bootsctrap,Javascript,Amazon lex</td>
-      <td><a href = "http://butterfly.maeema.com/" >butterfly.maeema.com<br/><a href = "http://hedgehog.maeema.com/" >hedgehog.maeema.com</a></a></td>
-    </tr>
-  </table>
+  <div class = "section portfolio" id="portfolio">
+  <h2>作品集</h2>
+  <ul class="profolio_menu">
+      <a  href='#cn_mainpage'> 全部 </a>
+      <a  href='#bio'> 游戏 </a>
+      <a  href='#portfolio'>摄影</a>
+      <a  href='/#experience'>绘画</a>
+      <a  href='/#contact'>其他</a>
+    </ul>
+    {% for item in portfolio %}
+    <p> {{ item.name }}</p>
+    <p>{{ item.date }} </p>
+    <p>{{ item.category }}</p>
+    <p>{{ item.description}}</p>
+    {% endfor %}
+
   </div>
 
   <div class = "section" id="experience">
-  <h1>Experience</h1>
-  <table>
-    <tr>
-      <th>Title</th> 
-      <th>Company</th>
-      <th>Start</th>
-      <th>End</th>
-    </tr>
-    <tr>
-      <td>Software Developer Intern</td>
-      <td>DisplayRide Inc</td>
-      <td>May 2019</td>
-      <td>Present</td>
-    </tr> 
-    <tr>
-      <td>Graduate Research Assistant</td>
-      <td>New Mexico Highlands University</td>
-      <td>August 2017</td>
-      <td>May 2019</td>
-    </tr>  
-    <tr>
-      <td>Software Engineer Intern</td>
-      <td>McKlein Company LLC</td>
-      <td>December 2018</td>
-      <td>March 2019</td>
-    </tr>   
-  </table>
+
   </div>
 
 <!-- Painting section-->

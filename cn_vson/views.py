@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Portfolio
 
 def cnIndex(request):
-    return render(request, 'cn_main.html')
+    Portfolios = Portfolio.objects.all()
+    return render(request, 'cn_main.html', {"portfolio":Portfolios})
