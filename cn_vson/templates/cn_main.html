@@ -4,6 +4,7 @@
 <!-- -->
 
 <head>
+  <meta charset="utf-8" /> 
   <title>米线儿黛西</title> 
   <!-- Link in css file -->
   <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/style.css'%}">
@@ -11,16 +12,9 @@
   <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/lightbox.min.css' %}">
   <!-- java script ligtbox file-->
   <script type="text/javascript" src="{% static 'personal/js/lightbox-plus-jquery.min.js' %}"></script>
-  <meta charset="utf-8" /> 
-  
-
-  <!-- header section --> 
-  <!-- <div class ="header">
-    <a href="#contact">Contact</a>
-  </div> -->
- <div class ="header">
-    <a href="/">ENGLISH</a>
-</div> 
+  <div class ="header">
+      <a href="/">ENGLISH</a>
+  </div> 
 
 </head>
 
@@ -76,12 +70,15 @@
       <a  href='/#experience'>绘画</a>
       <a  href='/#contact'>其他</a>
     </ul>
-    {% for item in portfolio %}
-    <p> {{ item.name }}</p>
-    <p>{{ item.date }} </p>
-    <p>{{ item.category }}</p>
-    <p>{{ item.description}}</p>
+    <div class="portfolio-item ">
+    {% for item in portfolio %} 
+            <div class = "showcase">
+            <p> {{ item.name }}</p>
+            <p> {{ item.date }} </p>
+            </div>
     {% endfor %}
+    </div>
+
 
   </div>
 

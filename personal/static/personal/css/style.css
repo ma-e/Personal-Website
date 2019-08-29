@@ -186,3 +186,15 @@ button {
 .profolio_menu ul,a{
   padding: 0px 50px 0px 50px;
 }
+
+.portfolio-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.showcase {
+  background-color: aquamarine;
+  border-radius: 25%;
+}
