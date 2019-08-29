@@ -195,6 +195,7 @@ button {
 }
 
 .watermelon-showcase {
+  color:white;
   border-radius: 25%;
   height:200px;
   border: 10px solid rgb(140,197,86);
