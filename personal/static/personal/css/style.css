@@ -176,7 +176,7 @@ button {
 
 .bio {
   /* background-color: yellow; */
-  border-top:  50px solid red;
+  border-top:  50px solid rgb(134,65,21);
 }
 
 .portfolio {
@@ -194,7 +194,21 @@ button {
   grid-auto-rows: minmax(100px, auto);
 }
 
-.showcase {
-  background-color: aquamarine;
+.watermelon-showcase {
   border-radius: 25%;
+  height:200px;
+  border: 10px solid rgb(140,197,86);
+  background-color:rgb(241,21,44);
+}
+
+.blog {
+  border-top:  50px solid darkorange;
+}
+
+.posts {
+  border-top:  50px solid purple;
+}
+
+.contact {
+  border-top:  50px solid red;
 }

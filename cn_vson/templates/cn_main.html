@@ -29,8 +29,9 @@
       <a  href='#cn_mainpage'> 主页 </a>
       <a  href='#bio'>个人档 </a>
       <a  href='#portfolio'>作品集</a>
-      <a  href='/#experience'>博文</a>
-      <a  href='/#contact'>留言 </a>
+      <a  href='#blog'>博文</a>
+      <a  href='#posts'>留言 </a>
+      <a  href='#contact'>合作 </a>
     </ul>
   </div>
 </div>
@@ -55,7 +56,7 @@
     </div>
 
     <div class="right" style = "display:block;width:50%;float:right"> 
-      <img style="width:50%" src = "{% static 'personal/img/portfolio.png' %}" />
+      <img style="width:50%;border-radius:50%;border:5px solid rgb(186, 139, 115);" src = "{% static 'personal/img/portfolio.png' %}" />
       </div>
   </div>
 
@@ -63,6 +64,7 @@
 
   <div class = "section portfolio" id="portfolio">
   <h2>作品集</h2>
+  <h6>这里收集一些个人的原创作品</h6> 
   <ul class="profolio_menu">
       <a  href='#cn_mainpage'> 全部 </a>
       <a  href='#bio'> 游戏 </a>
@@ -72,7 +74,7 @@
     </ul>
     <div class="portfolio-item ">
     {% for item in portfolio %} 
-            <div class = "showcase">
+            <div class = "watermelon-showcase">
             <p> {{ item.name }}</p>
             <p> {{ item.date }} </p>
             </div>
@@ -86,45 +88,23 @@
 
   </div>
 
-<!-- Painting section-->
-
-  <div id="painting" class="section gallery" >
-  <h1 style="font-variant: small-caps">Paintings</h1>
-  <a href="{% static 'personal/img/p1_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p1.jpg' %}"></a>
-  <a href="{% static 'personal/img/p2_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p2.jpg' %}"></a>
-  <a href="{% static 'personal/img/p3_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p3.jpg' %}"></a>
-  <a href="{% static 'personal/img/p4_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p4.jpg' %}"></a>
-  <a href="{% static 'personal/img/p5_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p5.jpg' %}"></a>
-  <a href="{% static 'personal/img/p6_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p6.jpg' %}"></a>
-  <a href="{% static 'personal/img/p7_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p7.jpg' %}"></a>
-  <a href="{% static 'personal/img/p8_big.jpg' %}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/p8.jpg' %}"></a>
+  <div id="blog" class="section blog" >
+    <h2>博文</h2>
+    <h6>碎碎念频道</h6>
   </div>
 
-  <div id="photography" class="gallery" >
-  <h1> Photography </h1>
-  <a href="{% static 'personal/img/ph1.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph1.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph2.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph2.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph3.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph3.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph4.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph4.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph5.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph5.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph6.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph6.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph7.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph7.jpg' %}"></a>
+  <div id="posts" class="section posts" >
+      <h2>留言</h2>
+      <h6>零距离对话区</h6>
   </div>
 
-
-  <div class = "section" id="contact" >
-  <h1>Contact</h1>
-  <p>If you would like to contact me, please email me!</p>
-  <p>Email: edaisyma@gmail.com</p> 
+  <div class = "section contact" id="contact" >
+  <p>商业合作</p>
+  <p>街拍预约</p>
+  <p>有偿投稿</p>
+  <p>志愿模特</p>
+  <p>邮箱: edaisyma@gmail.com</p> 
   </div>
-
-
-  <footer class = "section">
-    <div style='margin-left: 90px'>
-      <p><a href="https://www.instagram.com/smart_ema/?hl=en" target="#contact">Instagram</a> | <a href="https://www.linkedin.com/in/e-ma-050512162/" target="blank">LinkedIn</a> | <a href="https://www.youtube.com/channel/UCJD_WH53eKLmkzipr_9VF8g/" target="blank">Youtube</a> | <a href="https://plus.google.com/u/0/116287196993279085815" target="blank">Google+</a></p>
-    </div>
-  </footer> 
-
 
 </body>
 </html>
