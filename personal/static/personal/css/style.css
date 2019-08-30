@@ -143,19 +143,42 @@ button {
   font-family: 'Poppins', sans-serif;
 }
 
-.typeWriter h1 {
-  font-size: 1.5em;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.3em solid green; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .1em; /* Adjust as needed */
-  animation: 
-    typing 3s steps(550, end),
-    blink-caret 5s step-end infinite;
-  font-family: 'Poppins', sans-serif;
-  margin-top: 35%;
+/* https://www.codesdope.com/blog/article/12-creative-css-and-javascript-text-typing-animati/ */
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+.typeWriter h6 {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 50px;
+  color: black;
+  position: absolute;
+  right: 10px;
+  margin-top: 30%;
 }
+
+/* Animation */
+.typeWriter h6 {
+  animation: animated-text 4s steps(6,end) 1s 1 normal both,
+             animated-cursor 6000ms steps(17,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 286px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+}
+
+
 
 /* The typing effect */
 @keyframes typing {
@@ -166,17 +189,12 @@ button {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  /* 50% { border-right: 0.3em solid green } */
+  /* 50% { border-right: 0.3em solid red } */
 }
 
 
 .main {
   background: url(../img/backGround1.png) 50% 0 no-repeat;
-}
-
-.bio {
-  /* background-color: yellow; */
-  border-top:  50px solid rgb(134,65,21);
 }
 
 .portfolio {
@@ -195,16 +213,38 @@ button {
 }
 
 .watermelon-showcase {
-  color:white;
-  border-radius: 25%;
+  border-radius: 10%;
   height:200px;
   border: 10px solid rgb(140,197,86);
-  background-color:rgb(241,21,44);
+  background-color:white;
+}
+
+.bio {
+  /* background: url(../img/portfolio.png);
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; */
+}
+
+.bio p{
+  color:black;
+  font-size: 50px;
+  text-align: left;
 }
 
 .blog {
   border-top:  50px solid darkorange;
 }
+
+.blog-showcase {
+  border-radius: 10%;
+  height:200px;
+  border: 10px solid rgb(240, 178, 10);
+  background-color:white;
+}
+
 
 .posts {
   border-top:  50px solid purple;

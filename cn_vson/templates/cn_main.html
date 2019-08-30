@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="utf-8" /> 
-  <title>米线儿黛西</title> 
+  <title>米线女我</title> 
   <!-- Link in css file -->
   <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/style.css'%}">
   <!-- link in lightbox file-->
@@ -38,26 +38,29 @@
 
 <!-- main page section -->
 <div class = "section typeWriter main" id = "cn_mainpage">
-  
-  <h1>我不是天才，我只是米线儿。</h1>
+  <!-- <h1>我不是天才，我只是米线儿。</h1> -->
   <h6>米线女我</h6>
 </div>
 
 
-
-
   <div class = "section bio" id="bio">
-    <h2>个人档</h2>
-    <div class="left" style = "margin-top:30px; display:block;width:50%;float:left"> 
+    <!-- <h2>个人档</h2> -->
+    {% for item in bio_images %}
+    <p>{{item.bio_img.url}} <p>
+     <img src="../../{{item.bio_img.url}} " />
+    <div > 
+      <div >
       <p>食素</p>
       <p>控糖 控塑胶材料</p>
       <p>会写码的里面会画画会拍片会跳舞的</p> 
       <p>昆明 > 彭世洛 > 芝加哥 > 矽谷</p> 
-    </div>
-
-    <div class="right" style = "display:block;width:50%;float:right"> 
-      <img style="width:50%;border-radius:50%;border:5px solid rgb(186, 139, 115);" src = "{% static 'personal/img/portfolio.png' %}" />
       </div>
+    </div>
+    {% endfor%}
+
+    <!-- <div class="right" style = "display:block;width:50%;float:right"> 
+      <img style="width:50%;border-radius:0%;" src = "{% static 'personal/img/portfolio.png' %}" />
+      </div> -->
   </div>
 
 
@@ -73,7 +76,7 @@
       <a  href='/#contact'>其他</a>
     </ul>
     <div class="portfolio-item ">
-    {% for item in portfolio %} 
+    {% for item in portfolios %}         
             <div class = "watermelon-showcase">
             <p> {{ item.name }}</p>
             <p> {{ item.date }} </p>
@@ -84,13 +87,19 @@
 
   </div>
 
-  <div class = "section" id="experience">
-
-  </div>
-
   <div id="blog" class="section blog" >
     <h2>博文</h2>
     <h6>碎碎念频道</h6>
+    <div class="portfolio-item ">
+    {% for blog in blogs %} 
+            <a href = "{{ blog.get_absolute_url }} ">
+              <div class = "blog-showcase">
+              <p> {{ blog.title }}</p>
+              <p> {{ blog.date }} </p>
+              </div>
+            </a>
+    {% endfor %}
+    </div>
   </div>
 
   <div id="posts" class="section posts" >
