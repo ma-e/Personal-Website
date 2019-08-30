@@ -11,7 +11,7 @@
   <!-- link in lightbox file-->
   <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/lightbox.min.css' %}">
   <!-- java script ligtbox file-->
-  <script type="text/javascript" src="{% static 'personal/js/lightbox-plus-jquery.min.js' %}"></script>
+  <!-- <script type="text/javascript" src="{% static 'personal/js/lightbox-plus-jquery.min.js' %}"></script> -->
   <div class ="header">
       <a href="/">ENGLISH</a>
   </div> 
@@ -47,7 +47,7 @@
     <!-- <h2>个人档</h2> -->
     {% for item in bio_images %}
     <p>{{item.bio_img.url}} <p>
-     <img src="../../{{item.bio_img.url}} " />
+     <img src="../../{{item.bio_img.url}}" />
     <div > 
       <div >
       <p>食素</p>

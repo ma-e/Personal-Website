@@ -26,5 +26,5 @@ class Blog(models.Model):
 class Bio_img(models.Model):
     name = models.CharField(max_length=100)
     bio_category = models.CharField(max_length=100)
-    bio_img = models.ImageField(upload_to='static/images/') 
-
+    bio_img = models.ImageField(upload_to='cn_vson/static/images/') 
+    print ("hi",bio_img)
