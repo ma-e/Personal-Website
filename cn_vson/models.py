@@ -23,7 +23,16 @@ class Blog(models.Model):
     def get_absolute_url(self):
         return f"/cn/{self.title}"
 
-class Bio_img(models.Model):
+class Bio(models.Model):
     name = models.CharField(max_length=100)
     bio_category = models.CharField(max_length=100)
-    bio_img = models.ImageField(null=False) 
+
+    def __str__(self):
+        return self.name
+
+# class Bio_img(models.Model):
+#     bio = models.ForeignKey("Bio",default=Bio.objects.first().id,on_delete=models.CASCADE)
+#     bio_img = models.ImageField(blank=True,null=True) 
+
+#     def __str__(self):
+#         return self.Bio.name

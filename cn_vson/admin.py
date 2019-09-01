@@ -1,4 +1,4 @@
-from cn_vson.models import Portfolio,Blog,Bio_img
+from cn_vson.models import Portfolio,Blog,Bio
 from django.contrib import admin
 
-admin.site.register([Portfolio,Blog,Bio_img])
+admin.site.register([Portfolio,Blog,Bio])

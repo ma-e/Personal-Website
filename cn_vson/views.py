@@ -1,14 +1,14 @@
 from django.shortcuts import render,get_object_or_404
-from .models import Portfolio,Blog,Bio_img
+from .models import Portfolio,Blog,Bio
 
 def cnIndex(request):
     portfolios = Portfolio.objects.all()
     blogs = Blog.objects.all()
-    bio_imgs = Bio_img.objects.all()
+    bio_imgs = Bio.objects.all()
     context = {
         "portfolios":portfolios,
         "blogs":blogs,
-        "bio_images":bio_imgs
+        "bio_images":bio_imgs,
     }
     return render(request, 'cn_main.html', context)
 
