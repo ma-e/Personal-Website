@@ -220,12 +220,12 @@ button {
 }
 
 .bio {
-  /* background: url(../img/portfolio.png);
+  /* background: url(../img/portfolio.png); */
   height: 500px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative; */
+  position: relative;
 }
 
 .bio p{
@@ -238,6 +238,9 @@ button {
   border-top:  50px solid darkorange;
 }
 
+img {
+  width:50%
+}
 .blog-showcase {
   border-radius: 10%;
   height:200px;
@@ -252,4 +255,9 @@ button {
 
 .contact {
   border-top:  50px solid red;
+}
+
+
+.mySlides {
+  display:none;
 }
