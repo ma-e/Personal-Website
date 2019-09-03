@@ -4,6 +4,7 @@ body {
   background-attachment: fixed; 
   background-position: top; 
   background-size:cover;
+  font-family: 'Hiragino Kaku Gothic Pro', 'WenQuanYi Zen Hei', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
 }
 
 table, th, td {
@@ -160,15 +161,16 @@ button {
 
 /* Animation */
 .typeWriter h6 {
-  animation: animated-text 4s steps(6,end) 1s 1 normal both,
-             animated-cursor 6000ms steps(17,end) infinite;
+  margin-right: 200px;
+  animation: animated-text 0.3s steps(6,end) 1s 1 normal both,
+             animated-cursor 888ms steps(17,end) infinite;
 }
 
 /* text animation */
 
 @keyframes animated-text{
   from{width: 0;}
-  to{width: 286px;}
+  to{width: 300px;}
 }
 
 /* cursor animations */
@@ -198,7 +200,7 @@ button {
 }
 
 .portfolio {
-  border-top:  50px solid green;
+  border-top:  50px solid black;
 }
 
 .profolio_menu ul,a{
@@ -220,44 +222,51 @@ button {
 }
 
 .bio {
-  /* background: url(../img/portfolio.png); */
-  height: 500px;
+  border-top:  10px solid black;
+  border-bottom:  10px solid black;
+  height: 300px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  max-width:800px;
 }
 
 .bio p{
   color:black;
-  font-size: 50px;
+  font-size: 18px;
   text-align: left;
+  margin-left: -20px;
+}
+
+.top-left {
+  position: absolute;
+  top: 60px;
+  left: 16px;
 }
 
 .blog {
-  border-top:  50px solid darkorange;
+  border-top:  50px solid black;
 }
 
-img {
-  width:50%
-}
+
 .blog-showcase {
   border-radius: 10%;
   height:200px;
-  border: 10px solid rgb(240, 178, 10);
+  border: 10px solid black);
   background-color:white;
 }
 
 
 .posts {
-  border-top:  50px solid purple;
+  border-top:  50px solid black;
 }
 
 .contact {
-  border-top:  50px solid red;
+  border-top:  50px solid black;
 }
-
 
 .mySlides {
   display:none;
+  width:100%;
 }

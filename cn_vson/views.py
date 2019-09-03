@@ -4,11 +4,11 @@ from .models import Portfolio,Blog,Bio
 def cnIndex(request):
     portfolios = Portfolio.objects.all()
     blogs = Blog.objects.all()
-    bio_imgs = Bio.objects.all()
+    bio = Bio.objects.all()
     context = {
         "portfolios":portfolios,
         "blogs":blogs,
-        "bio_images":bio_imgs,
+        "bio_images":bio,
     }
     return render(request, 'cn_main.html', context)
 

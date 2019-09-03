@@ -38,54 +38,36 @@
 <!-- main page section -->
 <div class = "section typeWriter main" id = "cn_mainpage">
   <!-- <h1>我不是天才，我只是米线儿。</h1> -->
-  <h6>米线女我</h6>
+  <h6>我是米线女我</h6>
 </div>
 
-<!-- 
-  <div class = "section bio w3-content w3-section container" id="bio">
-    <!-- <h2>个人档</h2> -->
+
+  <div class = "section w3-content w3-section bio container" id="bio">
+      <h2>个人档</h2>
     {% for img in bio_images%}
-    <img style = "width:30%" class = "mySlides" src="{{img.bio_img.url}}" >
+    <img  class = "mySlides" src="{{img.bio_img.url}}" >
     {% endfor %}
-    {% for img in bio_images%}
-    <img style = "width:50%" class = "mySlides" src="{{img.bio_img.url}}" >
-    {% endfor %}
-    <script>
-        var myIndex = 0;
-        carousel();
-        
-        function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-          }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}    
-          x[myIndex-1].style.display = "block";  
-          setTimeout(carousel, 2500);
-        }
-        </script>
-      <div  class="top-left" style = "position: absolute;
-                                      top: 800px;
-                                      left: 16px;">
-      <p>食素</p>
-      <p>控糖 控塑胶材料</p>
-      <p>会写码的里面会画画会拍片会跳舞的</p> 
-      <p>昆明 > 彭世洛 > 芝加哥 > 矽谷</p> 
-      </div>
-  </div> -->
+    <div  class="top-left">
+
+    <h1>写<b>码</b>画<b>画</b>拍<b>片</b>跳<b>舞</b></h1>
+    <br><br><br><br><br><br>
+    <p>吃素戒糖, 昆明 ➡ 彭世洛 ➡ 芝加哥 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷.</p> 
+
+    </div>
+  </div> 
 
   <div class = "section portfolio" id="portfolio">
   <h2>作品集</h2>
   <h6>这里收集一些个人的原创作品</h6> 
-  <ul class="profolio_menu">
+  <div>
+  </div>
+  <!-- <ul class="profolio_menu">
       <a  href='#cn_mainpage'> 全部 </a>
       <a  href='#bio'> 游戏 </a>
       <a  href='#portfolio'>摄影</a>
       <a  href='/#experience'>绘画</a>
       <a  href='/#contact'>其他</a>
-    </ul>
+    </ul> -->
     <div class="portfolio-item ">
     {% for item in portfolios %}         
             <div class = "watermelon-showcase">
@@ -128,4 +110,21 @@
 
 </body>
 </html>
+
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2500);
+  }
+  </script>
 
