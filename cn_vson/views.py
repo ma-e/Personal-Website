@@ -1,12 +1,13 @@
 from django.shortcuts import render,get_object_or_404
-from .models import Portfolio,Blog,Bio
+from .models import Portfolio,Blog,Bio,Portfolio_game,Portfolio_painting,Portfolio_photo,Portfolio_other
 
 def cnIndex(request):
-    portfolios = Portfolio.objects.all()
+    portfolio = Portfolio.objects.all()
     blogs = Blog.objects.all()
     bio = Bio.objects.all()
+    portfolio_game = Portfolio_game.objects.all()
     context = {
-        "portfolios":portfolios,
+        "portfolios":portfolio,
         "blogs":blogs,
         "bio_images":bio,
     }
@@ -18,3 +19,40 @@ def cnBlog_detail(request,name):
         "blogs":blogs
     }
     return render(request,'cn_blog_detail.html',context)
+
+def cn_portfolio(request,name):
+    portfolio = Portfolio.objects.all()
+    context = {
+        "portfolios":portfolio
+    }
+    return render(request,'cn_portfolio_detail.html',context)
+
+
+
+def cn_portfolio_game(request,name):
+    portfolio_game = Portfolio_game.objects.all()
+    context = {
+        "portfolio_game": portfolio_game
+    }
+    return render(request,'cn_portfolio_game.html',context)
+
+def cn_portfolio_painting(request,name):
+    portfolio_painting = Portfolio_painting.objects.all()
+    context = {
+        "portfolio_painting": portfolio_painting
+    }
+    return render(request,'cn_portfolio_painting.html',context)
+
+def cn_portfolio_photo(request,name):
+    portfolio_photo = Portfolio_photo.objects.all()
+    context = {
+        "portfolio_photo": portfolio_photo
+    }
+    return render(request,'cn_portfolio_photo.html',context)
+
+def cn_portfolio_other(request,name):
+    portfolio_other = portfolio_other.objects.all()
+    context = {
+        "portfolio_other": portfolio_other
+    }
+    return render(request,'cn_portfolio_other.html',context)

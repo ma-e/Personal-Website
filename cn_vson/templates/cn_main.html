@@ -48,19 +48,27 @@
     <img  class = "mySlides" src="{{img.bio_img.url}}" >
     {% endfor %}
     <div  class="top-left">
-
     <h1>写<b>码</b>画<b>画</b>拍<b>片</b>跳<b>舞</b></h1>
     <br><br><br><br><br><br>
     <p>吃素戒糖, 昆明 ➡ 彭世洛 ➡ 芝加哥 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷.</p> 
-
     </div>
   </div> 
 
   <div class = "section portfolio" id="portfolio">
   <h2>作品集</h2>
   <h6>这里收集一些个人的原创作品</h6> 
-  <div>
+  
+  {% for item in portfolios %}
+  <a href = "{{ item.get_absolute_url }}" >
+  <div class = "container-portfolio inline " >
+      <img src= "{{item.portfolio_img.url}}" >
+      <div class = "centered" > 
+        <p>{{ item.portfolio_category}} </p>
+      </div> 
   </div>
+  </a>
+  {% endfor %} 
+
   <!-- <ul class="profolio_menu">
       <a  href='#cn_mainpage'> 全部 </a>
       <a  href='#bio'> 游戏 </a>
@@ -69,12 +77,12 @@
       <a  href='/#contact'>其他</a>
     </ul> -->
     <div class="portfolio-item ">
-    {% for item in portfolios %}         
+    <!-- {% for item in portfolios %}         
             <div class = "watermelon-showcase">
             <p> {{ item.name }}</p>
             <p> {{ item.date }} </p>
             </div>
-    {% endfor %}
+    {% endfor %} -->
     </div>
 
 
