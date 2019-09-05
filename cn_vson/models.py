@@ -92,5 +92,8 @@ class Portfolio_other(models.Model):
     def get_absolute_url(self):
         return f"/cn/{self.name}"
 
-
- 
+class Comment(models.Model):
+    name = models.CharField(max_length=100,null=True)
+    email= models.CharField(max_length=100,null=True)
+    content = models.CharField(max_length=500,null=True)
+    blog = models.CharField(max_length=100,null=True) 

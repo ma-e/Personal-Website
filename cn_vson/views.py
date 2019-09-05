@@ -1,15 +1,25 @@
 from django.shortcuts import render,get_object_or_404
-from .models import Portfolio,Blog,Bio,Portfolio_game,Portfolio_painting,Portfolio_photo,Portfolio_other
+from .models import Portfolio,Blog,Bio,Portfolio_game,Portfolio_painting,\
+                    Portfolio_photo,Portfolio_other,Comment
 
 def cnIndex(request):
     portfolio = Portfolio.objects.all()
     blogs = Blog.objects.all()
     bio = Bio.objects.all()
     portfolio_game = Portfolio_game.objects.all()
+    if request.method == "POST":
+        comment_ = Comment(name=request.POST.get("name"),\
+                           email=request.POST.get("email"),\
+                           content=request.POST.get("comment"),\
+                           blog=request.POST.get("blog"))
+        comment_.save()
+    comments = Comment.objects.all() 
+    print (comments)
     context = {
         "portfolios":portfolio,
         "blogs":blogs,
         "bio_images":bio,
+        "comments":comments,
     }
     return render(request, 'cn_main.html', context)
 

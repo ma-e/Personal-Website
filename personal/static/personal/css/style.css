@@ -240,6 +240,16 @@ button {
   max-width:800px;
 }
 
+.footer {
+  width:100%;
+  height:auto;
+  background-color:black;
+}
+
+.footer p {
+  color:white;
+}
+
 .bio p{
   color:black;
   font-size: 18px;
@@ -273,6 +283,7 @@ button {
 .contact {
   border-top:  50px solid black;
 }
+
 
 .mySlides {
   display:none;

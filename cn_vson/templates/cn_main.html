@@ -20,21 +20,7 @@
 <body class = "body" >
 
 
-<!-- Menu section -->
- <div class="dropdown">
-  <button class="dropbtn element"> 菜单 +  </button>
-   <div class="dropdown-content element" style="z-index:1">
-    <ul>
-      <a  href='#cn_mainpage'> 主页 </a>
-      <a  href='#bio'>个人档 </a>
-      <a  href='#portfolio'>作品集</a>
-      <a  href='#blog'>博文</a>
-      <a  href='#posts'>留言</a>
-      <a href="#lovenotes">恋恋笔记本</a>
-      <a  href='#contact'>合作 </a>
-    </ul>
-  </div>
-</div>
+{% include "cn_menu.html"%}
 
 <!-- main page section -->
 <div class = "section typeWriter main" id = "cn_mainpage">
@@ -43,66 +29,9 @@
 </div>
 
 
-  <div class = "section w3-content w3-section bio container" id="bio">
-      <h2>个人档</h2>
-    {% for img in bio_images%}
-    <img  class = "mySlides" src="{{img.bio_img.url}}" >
-    {% endfor %}
-    <div  class="top-left">
-    <h1>写<b>码</b>画<b>画</b>拍<b>片</b>跳<b>舞</b></h1>
-    <br><br><br><br><br><br>
-    <p>吃素戒糖, 昆明 ➡ 彭世洛 ➡ 芝加哥 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷.</p> 
-    </div>
-  </div> 
-
-  <div class = "section portfolio" id="portfolio">
-  <h2>作品集</h2>
-  <h6>这里收集一些个人的原创作品</h6> 
-  
-  {% for item in portfolios %}
-  <a href = "{{ item.get_absolute_url }}" >
-  <div class = "container-portfolio inline " >
-      <img src= "{{item.portfolio_img.url}}" >
-      <div class = "centered" > 
-        <p>{{ item.portfolio_category}} </p>
-      </div> 
-  </div>
-  </a>
-  {% endfor %} 
-
-  <!-- <ul class="profolio_menu">
-      <a  href='#cn_mainpage'> 全部 </a>
-      <a  href='#bio'> 游戏 </a>
-      <a  href='#portfolio'>摄影</a>
-      <a  href='/#experience'>绘画</a>
-      <a  href='/#contact'>其他</a>
-    </ul> -->
-    <div class="portfolio-item ">
-    <!-- {% for item in portfolios %}         
-            <div class = "watermelon-showcase">
-            <p> {{ item.name }}</p>
-            <p> {{ item.date }} </p>
-            </div>
-    {% endfor %} -->
-    </div>
-
-
-  </div>
-
-  <div id="blog" class="section blog" >
-    <h2>博文</h2>
-    <h6>碎碎念频道</h6>
-    <div class="portfolio-item ">
-    {% for blog in blogs %} 
-            <a href = "{{ blog.get_absolute_url }} ">
-              <div class = "blog-showcase">
-              <p> {{ blog.title }}</p>
-              <p> {{ blog.date }} </p>
-              </div>
-            </a>
-    {% endfor %}
-    </div>
-  </div>
+{% include "cn_bio.html" %}
+{% include "cn_portfolio.html" %}
+{% include "cn_blog.html" %}
 
   <div class = "section lovenotes" id="lovenotes" >
       <p>time</p>
@@ -113,14 +42,17 @@
   <div id="posts" class="section posts" >
       <h2>留言</h2>
       <h6>零距离对话区</h6>
-      <form>
+      <form action="{% url 'cn' %}#posts" method="post">
+        {% csrf_token %}
         <input type = "text" name = "comment" value = "请输入您的评论"> </input>
         <input type = "text" name = "name" value = "昵称"> </input>
         <input type = "text" name = "email" value = "邮箱"> </input>
         <input type = "text" name = "blog" value = "您的主页(选填)"> </input>
         <input type="submit" value="Submit">
-
       </form>
+      {% for comment in comments %}
+      <p>{{ comment.name}}{{ comment.email}}{{ comment.content}}</p>
+      {% endfor %}
 
   </div>
 
@@ -135,6 +67,7 @@
   <p>邮箱: edaisyma@gmail.com</p> 
   </div>
 
+  {% include "cn_footer.html" %}
 </body>
 </html>
 

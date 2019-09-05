@@ -1,0 +1,14 @@
+<div id="blog" class="section blog" >
+        <h2>博文</h2>
+        <h6>碎碎念频道</h6>
+        <div class="portfolio-item ">
+        {% for blog in blogs %} 
+                <a href = "{{ blog.get_absolute_url }} ">
+                  <div class = "blog-showcase">
+                  <p> {{ blog.title }}</p>
+                  <p> {{ blog.date }} </p>
+                  </div>
+                </a>
+        {% endfor %}
+        </div>
+</div>
