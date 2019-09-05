@@ -200,8 +200,15 @@ button {
 }
 
 .portfolio {
-  border-top:  50px solid black;
+  /* border-top:  50px solid black; */
+  background-color: black;
   height:100%;
+  color:white;
+}
+
+.lovenotes {
+  background-color: pink;
+  color:white;
 }
 
 .profolio_menu ul,a{
