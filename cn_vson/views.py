@@ -25,11 +25,18 @@ def cn_portfolio(request,name):
     context = {
         "portfolios":portfolio
     }
-    return render(request,'cn_portfolio_detail.html',context)
+    if name == "游戏":
+        return render(request,'cn_portfolio_game.html',context)
+    elif name == "彩铅":
+        return render(request,'cn_portfolio_painting.html',context)
+    elif name == "摄影":
+        return render(request,'cn_portfolio_photo.html',context)
+    else :
+        return render(request,'cn_portfolio_other.html',context)
 
 
 
-def cn_portfolio_game(request,name):
+def cn_portfolio_game(request,name="游戏"):
     portfolio_game = Portfolio_game.objects.all()
     context = {
         "portfolio_game": portfolio_game
