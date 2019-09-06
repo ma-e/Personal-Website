@@ -1,11 +1,11 @@
-<div class = "section w3-content w3-section bio container" id="bio">
-        <h2>个人档</h2>
-      {% for img in bio_images%}
-      <img  class = "mySlides" src="{{img.bio_img.url}}" >
-      {% endfor %}
-      <div  class="top-left">
-      <h1>写<b>码</b>画<b>画</b>拍<b>片</b>跳<b>舞</b></h1>
-      <br><br><br><br><br><br>
-      <p>吃素戒糖, 昆明 ➡ 彭世洛 ➡ 芝加哥 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷.</p> 
-      </div>
+<div class = "section w3-content w3-section bio" id="bio">
+    <h2>个人档</h2>
+    {% for img in bio_images%}
+    <img  class = "mySlides" src="{{img.bio_img.url}}" >
+    {% endfor %}
+    <br><br>
+    <div class="bio-txt"> 
+        <p>写<b>码,</b>画<b>画,</b>拍<b>片,</b>跳<b>舞.</b></p>
+        <p>吃素戒糖, 昆明 ➡ 彭世洛 ➡ 芝加哥 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷.</p> 
+    </div>
 </div> 

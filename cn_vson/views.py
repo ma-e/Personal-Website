@@ -7,20 +7,20 @@ def cnIndex(request):
     blogs = Blog.objects.all()
     bio = Bio.objects.all()
     portfolio_game = Portfolio_game.objects.all()
+    comments = Comment.objects.all() 
     if request.method == "POST":
         comment_ = Comment(name=request.POST.get("name"),\
                            email=request.POST.get("email"),\
                            content=request.POST.get("comment"),\
                            blog=request.POST.get("blog"))
         comment_.save()
-    comments = Comment.objects.all() 
-    print (comments)
-    context = {
-        "portfolios":portfolio,
-        "blogs":blogs,
-        "bio_images":bio,
-        "comments":comments,
-    }
+    else:
+        context = {
+            "portfolios":portfolio,
+            "blogs":blogs,
+            "bio_images":bio,
+            "comments":comments,
+        }
     return render(request, 'cn_main.html', context)
 
 def cnBlog_detail(request,name):

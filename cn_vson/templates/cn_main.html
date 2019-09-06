@@ -4,70 +4,30 @@
 <!-- -->
 
 <head>
-  <meta charset="utf-8" /> 
-  <title>米线女我</title> 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/style.css'%}">
-  <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/lightbox.min.css' %}">
-  <div class ="header">
-      <a href="/">ENGLISH</a>
-  </div> 
-
+    <meta charset="utf-8" /> 
+    <title>米线女我</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/lightbox.min.css' %}">
 </head>
 
 <body class = "body" >
 
-
-{% include "cn_menu.html"%}
-
-<!-- main page section -->
 <div class = "section typeWriter main" id = "cn_mainpage">
-  <!-- <h1>我不是天才，我只是米线儿。</h1> -->
-  <h6>我是米线女我</h6>
+    <h6>我是米线女我</h6>
 </div>
 
-
+{% include "cn_menu.html"%}
 {% include "cn_bio.html" %}
 {% include "cn_portfolio.html" %}
 {% include "cn_blog.html" %}
+{% include "cn_lovenotes.html" %}
+{% include "cn_posts.html" %}
+{% include "cn_contact.html" %}
+{% include "cn_footer.html" %}
 
-  <div class = "section lovenotes" id="lovenotes" >
-      <p>time</p>
-      <p>location</p>
-      <p>restrant</p>
-  </div>
-
-  <div id="posts" class="section posts" >
-      <h2>留言</h2>
-      <h6>零距离对话区</h6>
-      <form action="{% url 'cn' %}#posts" method="post">
-        {% csrf_token %}
-        <input type = "text" name = "comment" value = "请输入您的评论"> </input>
-        <input type = "text" name = "name" value = "昵称"> </input>
-        <input type = "text" name = "email" value = "邮箱"> </input>
-        <input type = "text" name = "blog" value = "您的主页(选填)"> </input>
-        <input type="submit" value="Submit">
-      </form>
-      {% for comment in comments %}
-      <p>{{ comment.name}}{{ comment.email}}{{ comment.content}}</p>
-      {% endfor %}
-
-  </div>
-
-
-
-
-  <div class = "section contact" id="contact" >
-  <p>商业合作</p>
-  <p>街拍预约</p>
-  <p>有偿投稿</p>
-  <p>志愿模特</p>
-  <p>邮箱: edaisyma@gmail.com</p> 
-  </div>
-
-  {% include "cn_footer.html" %}
 </body>
 </html>
 
