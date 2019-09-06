@@ -210,12 +210,13 @@ button {
 }
 
 
-/* .portfolio-item {
+.portfolio-item {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-} */
+  color:black;
+}
 
 .watermelon-showcase {
   border-radius: 10%;
@@ -244,12 +245,19 @@ button {
 }
 
 .footer {
+  margin-bot: 5%;
   width:100%;
-  height:auto;
+  height:300px;
   background-color:black;
+  color:white;
+  text-align: center;
 }
 
-.footer h1,p {
+.footer h1{
+  margin-top:50px;
+}
+
+.footer h1,p,a {
   color:white;
 }
 
@@ -272,8 +280,11 @@ button {
 .blog-showcase {
   border-radius: 10%;
   height:200px;
-  border: 10px solid black);
+  border: 10px solid black;
   background-color:white;
+}
+.blog-showcase p {
+  color:black;
 }
 
 

@@ -9,7 +9,7 @@
           <input type = "text" name = "blog" value = "您的主页(选填)"> </input>
           <input type="submit" value="Submit">
         </form>
-        <!-- {% for comment in comments %}
-        <p>{{ comment.name}}{{ comment.email}}{{ comment.content}}</p>
-        {% endfor %} -->
+        {% for comment in comments %}
+        <p style="color:black">{{ comment.name}} ** {{ comment.email}} ** {{ comment.content}}</p>
+        {% endfor %}
 </div>

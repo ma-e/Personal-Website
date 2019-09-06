@@ -14,13 +14,12 @@ def cnIndex(request):
                            content=request.POST.get("comment"),\
                            blog=request.POST.get("blog"))
         comment_.save()
-    else:
-        context = {
-            "portfolios":portfolio,
-            "blogs":blogs,
-            "bio_images":bio,
-            "comments":comments,
-        }
+    context = {
+        "portfolios":portfolio,
+        "blogs":blogs,
+        "bio_images":bio,
+        "comments":comments,
+    }
     return render(request, 'cn_main.html', context)
 
 def cnBlog_detail(request,name):
