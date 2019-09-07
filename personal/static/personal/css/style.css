@@ -53,6 +53,11 @@ button {
   right:2%; 
 }
 
+.header a{
+  color:black;
+}
+
+
 /*drop down button style*/
 .dropbtn {
   background-color:white;
@@ -257,7 +262,7 @@ button {
   margin-top:50px;
 }
 
-.footer h1,p,a {
+.footer h1,p,a{
   color:white;
 }
 
@@ -273,7 +278,7 @@ button {
 }
 
 .blog {
-  border-top:  50px solid black;
+  border-top:  2px solid black;
 }
 
 
@@ -347,3 +352,7 @@ img {
   
 }
 
+.posts p {
+  color:black;
+
+}

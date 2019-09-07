@@ -10,6 +10,9 @@
           <input type="submit" value="Submit">
         </form>
         {% for comment in comments %}
-        <p style="color:black">{{ comment.name}} ** {{ comment.email}} ** {{ comment.content}}</p>
+        <p style="color:black; 
+                  border-bottom:black 0.1px solid;">
+                  {{ comment.name}} ** {{ comment.email}} ** {{ comment.content}}
+        </p>
         {% endfor %}
 </div>
