@@ -1,16 +1,18 @@
 
-<div class = "section portfolio" id="portfolio">
+<div class = "section" id="portfolio">
   <h2>作品集</h2>
   <h6>这里收集一些个人的原创作品</h6> 
 
-  {% for item in portfolios %}
-  <a href = "{{ item.get_absolute_url }}" >
-      <div class = "container-portfolio inline " >
-        <img src= "{{item.portfolio_img.url}}" >
-          <div class = "centered" > 
+
+      <div class = "grid-container-portfolio " >
+        {% for item in portfolios %}
+        <a href = "{{ item.get_absolute_url }}" >
+          <div class = "grid-container-portfolio-item" > 
+            <img src= "{{item.portfolio_img.url}}" >
             <p>{{ item.portfolio_category}} </p>
           </div> 
+        </a>
+          {% endfor %} 
     </div>
-  </a>
-  {% endfor %} 
+
 </div>
