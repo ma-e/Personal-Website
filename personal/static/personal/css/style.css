@@ -50,7 +50,8 @@ button {
 .header {
   position:fixed; 
   top:5%; 
-  right:2%; 
+  right:2%;
+  padding:8px; 
 }
 
 .header a{
@@ -66,6 +67,7 @@ button {
   font-size: 20px;
   border:none;
   cursor:pointer;
+  
 }
 
 
@@ -134,6 +136,11 @@ button {
   position:fixed; 
   top:2%; 
   left:2%; 
+}
+
+.language {
+  top:2%;
+  right:2%;
 }
 
 .section {
