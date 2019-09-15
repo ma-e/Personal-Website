@@ -42,8 +42,10 @@ p {
 }
 
 button {
-  font-weight: bold; 
-  font-variant:Verdana;
+  font-size: 15px;
+  color: black;
+  border: 1px black solid;
+  background-color: white;
 }
 
   
@@ -353,4 +355,48 @@ img {
 .posts p {
   color:black;
 
+}
+
+input {
+  text-align:center; 
+  color:black;
+  border: 0;
+  border-bottom: 1px solid black;
+  font-size: 0.5em;
+  margin: 0 auto;
+  font-size: 15px;
+  padding: 15px;
+}
+*:focus {
+  outline: none;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+  text-indent: -99999px;
+}
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+  text-indent: -99999px;
+}
+
+textarea{
+  width: 80%;
+  height: auto;
+  margin-top: 25px;
+  font-size: 15px;
+  border: none;
+  background-color: rgb(242,242,242);
+  padding:20px;
+}
+
+.comment-item {
+  width: 80%;
+  height: auto;
+  margin-top: 25px;
+  font-size: 15px;
+  border: none;
+  background-color: rgb(242,242,242);
+  padding:20px;
+  text-align: left;
+  overflow:auto;
 }
