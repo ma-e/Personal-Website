@@ -96,4 +96,5 @@ class Comment(models.Model):
     name = models.CharField(max_length=100,null=True)
     email= models.CharField(max_length=100,null=True)
     content = models.CharField(max_length=500,null=True)
-    blog = models.CharField(max_length=100,null=True) 
+    blog = models.CharField(max_length=100,null=True)
+    date = date = models.DateField(auto_now_add=True, blank=True)

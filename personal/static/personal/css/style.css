@@ -389,14 +389,31 @@ textarea{
   padding:20px;
 }
 
-.comment-item {
+.comment-item p{
   width: 80%;
   height: auto;
-  margin-top: 25px;
+  margin-top: 10px;
   font-size: 15px;
   border: none;
-  background-color: rgb(242,242,242);
+  background-color: rgb(244,244,246);
   padding:20px;
   text-align: left;
-  overflow:auto;
+  display:inline-block;
+  margin-bottom: -20px;
+}
+.comment-item p:hover {
+  background-color:black;
+  color:white;
+}
+
+.comment-item h6{
+  width: 80%;
+  height: auto;
+  font-size: 15px;
+  border: none;
+  background-color:white;
+  text-align: right;
+  padding:0;
+  display:inline-block;
+  color:rgb(164,164,169);
 }
