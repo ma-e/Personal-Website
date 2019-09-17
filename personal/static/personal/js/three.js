@@ -47,7 +47,7 @@ scene.add(group);
 const loader = new THREE.FontLoader();
 const textMesh = new THREE.Mesh();
 const createTypo = font => {
-	const word = "floating";
+	const word = "Focus";
 	const typoProperties = {
 		font: font,
 		size: cubeSize,

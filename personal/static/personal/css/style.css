@@ -406,15 +406,17 @@ textarea{
   margin-bottom: -20px;
 }
 
-.comment-item p:hover,
-.comment-item p:focus {
-  box-shadow: 0.1em 0.1em 0.5em 0.5em pink;
-  transform: translateY(-0.25em);
+img {
+  background-color: black;
 }
-
 img:hover,
 img:focus {
-  box-shadow: 0.1em 0.1em 0.5em 0.5em pink;
+  opacity: 0.6;
+}
+
+textarea:hover,
+textarea:focus {
+  box-shadow: 0.1em 0.1em 0.5em 0.5em lightgrey;
   transform: translateY(-0.25em);
 }
 
