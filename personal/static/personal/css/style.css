@@ -272,8 +272,12 @@ height:100%
   margin-top:50px;
 }
 
-.footer h1,p,a{
+.footer p,h2{
   color:white;
+}
+
+h1,p,a {
+  color:black;
 }
 
 .top-left {
@@ -332,6 +336,7 @@ height:100%
   padding: 0px;
   font-size: 30px;
   text-align: center;
+  color:black;
 }
 
 /* .container-pop-right {

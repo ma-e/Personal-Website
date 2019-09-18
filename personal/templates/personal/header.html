@@ -4,200 +4,48 @@
 <!-- -->
 
 <head>
-  <title>E MA</title> 
-  <!-- Link in css file -->
-  <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/style.css'%}">
-  <!-- link in lightbox file-->
-  <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/lightbox.min.css' %}">
-  <!-- java script ligtbox file-->
-  <!-- <script type="text/javascript" src="{% static 'personal/js/lightbox-plus-jquery.min.js' %}"></script> -->
-  <meta charset="utf-8" /> 
-  
-
-  <!-- header section --> 
-  <!-- <div class ="header">
-    <a href="#contact">Contact</a>
-  </div> -->
- <div class ="header language">
-    <a href="/cn/"><h4 style="color:black">中文</h4></a>
-</div> 
-
+    <meta charset="utf-8" /> 
+    <title>米线女我</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href = "{% static 'personal/css/lightbox.min.css' %}">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
 </head>
 
-
 <body class = "body" >
-
-<div class="pyro">
-  <div class="before"></div>
-  <div class="after"></div>
+<div class = "typeWriter main" id = "cn_mainpage">
+    <h6>Crious.</h6>
 </div>
 
-
-<!-- Menu section -->
- <div class="dropdown">
-  <button class="dropbtn element"> Menu +  </button>
-   <div class="dropdown-content element" style="z-index:1">
-    <ul><font size="3" face="Verdana">
-      <a  href='/#mainpage'> Main </a>
-      <a  href='/#aboutme'>About Me</a>
-      <!-- <a  href='/#education'>Education </a> -->
-      <a  href='/#projects'>Portfolio</a>
-      <!-- <a  href='/#experience'>Experience</a> -->
-      <a  href='/#painting'>Paintings </a>
-      <a  href='/#photography'>Photography </a>
-      <a  href='/#contact'>Contact </a>
-    </font>
-    </ul>
-  </div>
-</div>
-
-<!-- main page section -->
-<center>
-  <div id = "mainpage" style = " background: url(static/personal/img/backGround1.png) 50% 0 no-repeat fixed; 
-                                 height:100%; 
-                                 margin-top: 0px; 
-                                 margin-bottom: 150px; 
-                                 font-size: 30px ">
-    <br><br>
-    <h1>Daisy M. is here</h1>
-     <br><br>
-     <br><br>
-  </div>
-</center>
-
-
-<!-- Education section -->
-<center>
-    <br><br>
-    <br><br>
-  <div class="container" id="education" style="height:100%; background-color:white; width:90%;">
-  <h1>Education </h1>
-  <table>
-  <tr>
-    <th>School</th>
-    <th>Degree</th> 
-    <th>Field of study</th>
-    <th>Grade</th>
-  </tr>
-  <tr>
-    <td>New Mexico Highlands University</td>
-    <td>Master's</td>
-    <td>Computer Science</td>
-    <td>4.0</td>
-  </tr>
-  <tr>
-    <td>Southwest University</td>
-    <td>Bachalor's</td>
-    <td>Business Management</td>
-    <td>3.7</td>
-  </tr>
-</table>
-</center>
-<br>
-
-<!-- Projects section-->
-<center>
-  <div class="container" id="projects" style="height:100%; background-color:white; width:90%； margin-top: 100px">
-  <h1>Portfolio</h1>
-  <table>
-    <tr>
-      <th>Project</th> 
-      <th>Explaination</th>
-      <th>Url</th>
-    </tr>
-    <tr>
-      <td>Personal website</td>
-      <td>Django,HTML5,CSS</td>
-      <td><a href = "http://www.maeema.com">www.maeema.com</a></td>
-    </tr>
-    <tr>
-      <td>MAE web application</td>
-      <td>Python,Django,Bootsctrap,Javascript,Amazon lex</td>
-      <td><a href = "http://butterfly.maeema.com/" >butterfly.maeema.com<br/><a href = "http://hedgehog.maeema.com/" >hedgehog.maeema.com</a></a></td>
-    </tr>
-    <!-- <tr>
-      <td>React todo list</td>
-      <td>React,javascript,HTML,CSS,Google Firebase</td>
-      <td>......</td>
-    </tr> -->
-  </table>
-</center>
-  <br><br>
-
-<!-- Experience section-->
-<center>
-  <div class="container" id="experience" style="height:100%; background-color:white; width:90%； margin-top: 100px">
-  <h1>Experience</h1>
-  <table>
-    <tr>
-      <th>Title</th> 
-      <th>Company</th>
-      <th>Start</th>
-      <th>End</th>
-    </tr>
-    <tr>
-      <td>Software Developer Intern</td>
-      <td>DisplayRide Inc</td>
-      <td>May 2019</td>
-      <td>Present</td>
-    </tr> 
-    <tr>
-      <td>Graduate Research Assistant</td>
-      <td>New Mexico Highlands University</td>
-      <td>August 2017</td>
-      <td>May 2019</td>
-    </tr>  
-    <tr>
-      <td>Software Engineer Intern</td>
-      <td>McKlein Company LLC</td>
-      <td>December 2018</td>
-      <td>March 2019</td>
-    </tr>   
-    <!-- <tr>
-      <td>Mandarin Teacher</td>
-      <td>Padoongrasdra School</td>
-      <td>March 2013</td>
-      <td>March 2014</td>
-    </tr> -->
-  </table>
-</center>
-  <br><br>
-
-<!-- Painting section-->
-
-
-<!-- Photography section (thinking about videos) -->
-<center>
-  <div id="photography" class="gallery" style="height:100%; background-color:lightgray; width:90%;">
-  <h1> Photography </h1>
-  <a href="{% static 'personal/img/ph1.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph1.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph2.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph2.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph3.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph3.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph4.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph4.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph5.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph5.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph6.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph6.jpg' %}"></a>
-  <a href="{% static 'personal/img/ph7.jpg'%}" data-lightbox ="mygallery"><img src = "{% static 'personal/img/ph7.jpg' %}"></a>
-  <br><br>
-</center>
-
-<!-- Contact section -->
-<center>
-  <div id="contact" style="height:100%; background-color:lightgray; width:90%">
-  <h1>Contact</h1>
-  <p>If you would like to contact me, please email me!</p>
-  <p>Email: ema@live.nmhu.edu</p> 
-</center>
-
-<!-- Footer section -->
-<center>
-  
-  <footer>
-    <div style='margin-left: 90px'>
-      <p><a href="https://www.instagram.com/smart_ema/?hl=en" target="#contact">Instagram</a> | <a href="https://www.linkedin.com/in/e-ma-050512162/" target="blank">LinkedIn</a> | <a href="https://www.youtube.com/channel/UCJD_WH53eKLmkzipr_9VF8g/" target="blank">Youtube</a> | <a href="https://plus.google.com/u/0/116287196993279085815" target="blank">Google+</a></p>
-    </div>
-  </footer> 
-</center>
+{% include "personal/includes/en_menu.html"%}
+{% include "cn_bio.html" %}
+{% include "cn_portfolio.html" %}
+<!-- {% include "cn_blog.html" %} -->
+<!-- {% include "cn_lovenotes.html" %} -->
+{% include "cn_posts.html" %}
+<!-- {% include "cn_contact.html" %} -->
+{% include "cn_footer.html" %}
 
 </body>
 </html>
 
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2500);
+  }
+  </script>
+
+<script src="{% static 'personal/js/three.js'%}"></script>
