@@ -16,11 +16,10 @@ renderer.setClearColor("rgb(252,252,252)"); // Backgrond Color - Blue
 renderer.setPixelRatio(window.devicePixelRatio); // For HiDPI devices to prevent bluring output canvas
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.querySelector("#cn_mainpage").appendChild(renderer.domElement);
-
 // CREATE CUBES
 const cubeSize = 120;
-const geometry = new THREE.BoxBufferGeometry(cubeSize, cubeSize, cubeSize); // BufferAttribute allows for more efficient passing of data to the GPU
-const material = new THREE.MeshNormalMaterial(); // Maps the normal vectors to RGB colors
+const geometry = new THREE.BoxBufferGeometry(cubeSize,cubeSize,cubeSize); // BufferAttribute allows for more efficient passing of data to the GPU
+const material = new THREE.MeshBasicMaterial( {color: '#008000'} ); // Maps the normal vectors to RGB colors
 const group = new THREE.Group();
 for (let i = 0; i < 350; i++) {
 	const mesh = new THREE.Mesh(geometry, material);
@@ -64,7 +63,7 @@ const createTypo = font => {
 	textMesh.material = material;
 	textMesh.position.x = cubeSize * -2;
 	textMesh.position.z = cubeSize * -1;
-	scene.add(textMesh);
+	// scene.add(textMesh);
 };
 loader.load(
 	"https://threejs.org/examples/fonts/helvetiker_regular.typeface.json",
