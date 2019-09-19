@@ -27,7 +27,6 @@ class Bio(models.Model):
     name = models.CharField(max_length=100)
     bio_category = models.CharField(max_length=100)
     bio_img = models.ImageField() 
-
     def __str__(self):
         return self.name
     def get_absolute_url(self):

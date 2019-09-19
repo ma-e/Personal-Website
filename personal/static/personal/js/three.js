@@ -19,7 +19,7 @@ document.querySelector("#cn_mainpage").appendChild(renderer.domElement);
 // CREATE CUBES
 const cubeSize = 120;
 const geometry = new THREE.BoxBufferGeometry(cubeSize,cubeSize,cubeSize); // BufferAttribute allows for more efficient passing of data to the GPU
-const material = new THREE.MeshBasicMaterial( {color: '#008000'} ); // Maps the normal vectors to RGB colors
+const material = new THREE.MeshBasicMaterial( {color: '#FADBD8'} ); // Maps the normal vectors to RGB colors
 const group = new THREE.Group();
 for (let i = 0; i < 350; i++) {
 	const mesh = new THREE.Mesh(geometry, material);
