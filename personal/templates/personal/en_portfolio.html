@@ -1,0 +1,17 @@
+
+<div class = "section" id="portfolio">
+    <h3>Portfolio</h3>
+    <h6>Here are some projects I've done, visit github@ma-e for more recent projects.</h6> 
+  
+        <div class = "grid-container-portfolio " >
+          {% for item in portfolios %}
+          <a href = "{{ item.get_absolute_url }}" >
+            <div class = "grid-container-portfolio-item" > 
+              <img src= "{{item.portfolio_img.url}}" >
+              <p>{{ item.portfolio_category}} </p>
+            </div> 
+          </a>
+            {% endfor %} 
+      </div>
+  
+  </div>

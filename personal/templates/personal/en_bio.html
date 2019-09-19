@@ -1,11 +1,11 @@
 <div class = "section w3-content w3-section bio" id="bio">
     <h2>个人档</h2>
-    {% for img in Bios%}
-    <img  class = "mySlides" src=" ../../cn_vson/{{ img.bio_img.url}}" >
+    {% for img in bio_images%}
+    <img  class = "mySlides" src="{{ img.bio_img.url}}" >
     {% endfor %}
     <br>
     <div class="bio-txt"> 
-        <p>Coding makes me happy.</b></p>
-        <p>吃素戒糖, 昆明 ➡ 彭世洛 ➡ 芝加哥 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷 ➡ 矽谷.</p> 
+        <p>Coding. Painting. Photography.</p>
+        <!-- <p>China, Thailand, the United States. </p>  -->
     </div>
 </div> 
