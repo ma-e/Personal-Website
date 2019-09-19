@@ -9,10 +9,10 @@ def index(request):
     portfolio_game = Portfolio_game.objects.all()
     comments = Comment.objects.all() 
     if request.method == "POST":
-        comment_ = Comment(name=request.POST.get("name"),\
-                           email=request.POST.get("email"),\
-                           content=request.POST.get("comment"),\
-                           blog=request.POST.get("blog"))
+        comment_ = Comment(name=request.POST.get("en_name"),\
+                           email=request.POST.get("en_email"),\
+                           content=request.POST.get("en_comment"),\
+                           blog=request.POST.get("en_blog"))
         comment_.save()
     context = {
         "portfolios":portfolio,
