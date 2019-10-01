@@ -34,11 +34,11 @@ def portfolio(request,name):
     context = {
         "portfolios":portfolio
     }
-    if name == "game":
+    if name == "Data Visualization":
         return render(request,'personal/en_portfolio_game.html',context)
-    elif name == "painting":
+    elif name == "Painting":
         return render(request,'personal/en_portfolio_painting.html',context)
-    elif name == "photography":
+    elif name == "Photography":
         return render(request,'personal/en_portfolio_photo.html',context)
     else :
         return render(request,'personal/en_portfolio_other.html',context)

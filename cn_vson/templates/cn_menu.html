@@ -1,3 +1,4 @@
+{% load static %}
 <div class="dropdown">
     <button class="dropbtn element"> 菜单 +  </button>
     <div class="dropdown-content element" style="z-index:1">
@@ -7,6 +8,7 @@
             <a  href='#portfolio'>作品集</a>
             <!-- <a  href='#blog'>博文</a> -->
             <a  href='#posts'>留言</a>
+            <a  href= "{% static 'personal/text/Resume.pdf' %}" target = "_blank" >个人简历</a>
             <!-- <a href="#lovenotes">恋恋笔记本</a> -->
             <!-- <a  href='#contact'>合作 </a> -->
         </ul>
