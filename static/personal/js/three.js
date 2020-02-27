@@ -3,7 +3,7 @@ const farDist = 10000;
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
-	175,
+	75,
 	window.innerWidth / window.innerHeight,
 	nearDist,
 	farDist
