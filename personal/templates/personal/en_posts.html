@@ -1,7 +1,7 @@
 <div id="posts" class="section posts" >
         <h3>Comments</h3>
         <h6></h6>
-        <form action="{% url 'cn' %}#posts" method="post">
+        <form action="#posts" method="post">
           {% csrf_token %}
           <input type = "text" name = "en_name" placeholder = "name*"> </input>
           <input type = "text" name = "en_email" placeholder = "email*"> </input>
