@@ -1,15 +1,25 @@
 <div class = "section w3-content w3-section bio" id="bio">
     <!-- <h3>About Me</h3> -->
-    <div class="bio-txt"> 
-        <h3>--- Daisy(E) M. ---</h3>
-        <h6>Currently, I am pursuing my Master's Degree in <b>Computer Science</b> at NMHU.</h6>
-            
-        <h6>I have previously interned at <b>DisplayRide</b> and <b>McKlein</b>. </h6>
-        <h6>I am looking for opportunities in the technology consulting field and web development job to gain more practical experiences.</h6> 
-    </div>
     {% for img in bio_images%}
-    <img  class = "mySlides" src="{{ img.bio_img.url}}" >
+    <center>
+    <img  class = "mySlides" style="width:50%; border-radius: 100%;" src="{{ img.bio_img.url}}" >
+    </center>
     {% endfor %}
+
+    <div class="bio-txt"> 
+        <!-- <h4>Hi there! I'm E, a Computer Science graduate student at NMHU.</h4>
+        <h4>I like to program and learn new things.</h4>
+        <h6>I have previously interned at DisplayRide and McKlein. Currently, seeking opportunities in the technology consulting field and web development job to gain more practical experience.</h6> -->
+        <!-- <link>Linkedin</link><i class="fab fa-linkedin-in"></i>
+        <link>Github</link>     -->
+        <h4>Name: E M.</h4>
+        <h4>Nicknames: Emma, Daisy</h4>
+        <h4>Computer Science graduate at NMHU</h4>
+        <a href="https://www.linkedin.com/in/daisy-e-m-050512162/"><i style="font-size:24px" class="fa">&#xf08c;</i></a>
+        <a href="https://github.com/ma-e"><i style="font-size:24px" class="fa">&#xf09b;</i></a>
+        
+    </div>
+
     <br>
 
 </div> 
