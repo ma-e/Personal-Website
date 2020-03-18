@@ -1,13 +1,15 @@
 from django.shortcuts import render
 from django.shortcuts import render,get_object_or_404
 from .models import Portfolio,Blog,Bio,Portfolio_game,Portfolio_painting,\
-                    Portfolio_photo,Portfolio_other,Comment
+                    Portfolio_photo,Portfolio_other,Comment, Project
 def index(request):
+    projects = Project.objects.all()
+    print(projects)
     portfolio = Portfolio.objects.all()
     blogs = Blog.objects.all()
     bio = Bio.objects.all()
     portfolio_game = Portfolio_game.objects.all()
-    comments = Comment.objects.all() 
+    comments = Comment.objects.all()
     if request.method == "POST":
         comment_ = Comment(name=request.POST.get("en_name"),\
                            email=request.POST.get("en_email"),\
@@ -19,6 +21,7 @@ def index(request):
         "blogs":blogs,
         "bio_images":bio,
         "comments":comments,
+        "projects":projects
     }
     return render(request, 'personal/header.html', context)
 
@@ -42,7 +45,6 @@ def portfolio(request,name):
         return render(request,'personal/en_portfolio_photo.html',context)
     else :
         return render(request,'personal/en_portfolio_other.html',context)
-
 
 
 # def cn_portfolio_game(request,name="游戏"):

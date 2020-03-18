@@ -150,8 +150,7 @@ button {
 
 .section {
   font-size: 30px; 
-  padding: 35px 100px 100px 50px;
-  width:100%; 
+  padding: 35px 100px 100px 100px;
   height:auto;
   min-width: 800px;
   min-height: 700px;
@@ -303,6 +302,12 @@ h1,p,a {
   width:80%;
 }
 
+/* .projects{
+  border-top:  10px solid red;
+  background-color: white;
+  width:80%;
+} */
+
 .contact {
   border-top:  1px solid black;
 }
@@ -426,3 +431,36 @@ textarea:focus {
   display:inline-block;
   color:rgb(164,164,169);
 }
+
+.project-menu ul{
+  border-bottom: 1em solid black;
+  overflow:hidden;
+  white-space:nowrap;
+
+}
+.project-menu li {
+  text-underline-position: below;
+  font-size: 1px;
+  padding-right: 50px;
+  display:inline-block;
+}
+
+.project-menu li a {
+  font-size:15em;
+}
+
+.wrapper{
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 10px;
+}
+
+.project-grid-item{
+  background-color: lightgoldenrodyellow;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  color:black;
+}
+

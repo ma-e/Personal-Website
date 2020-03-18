@@ -1,0 +1,42 @@
+
+<div class = "section projects" id="projects">
+    <h3>Projects</h3>
+    <h6>Here are the projects I made so far.</h6> 
+
+      <div class="project-menu" >
+        <ul class="project-menu" style="border-bottom: 5px solid black">
+          <li class="nav-item active">
+            <a class="nav-link" href="#projects">ALL <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">GAME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">WEB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">APP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Other</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="wrapper">
+          {% for item in projects %}
+            <!-- TODO Add Link -->
+            <!-- <a> -->
+              <div class="project-grid-item">
+                <img src={{item.projects_img.url}} alt="...">
+              <h3> {{ item.name}}</h3>
+              <p> {{ item.description}}</p> 
+              <a> view </a>
+              </div>
+            <!-- </a> -->
+            {% endfor %} 
+        </div> 
+
+
+      </div>
+
