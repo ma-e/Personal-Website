@@ -1,27 +1,38 @@
 from django.shortcuts import render
 from django.shortcuts import render,get_object_or_404
+# from visits.models import Visits
 from .models import Portfolio,Blog,Bio,Portfolio_game,Portfolio_painting,\
-                    Portfolio_photo,Portfolio_other,Comment, Project
+                    Portfolio_photo,Portfolio_other,Comment, Project, Post
 def index(request):
     projects = Project.objects.all()
-    print(projects)
     portfolio = Portfolio.objects.all()
     blogs = Blog.objects.all()
     bio = Bio.objects.all()
     portfolio_game = Portfolio_game.objects.all()
     comments = Comment.objects.all()
+    Posts = Post.objects.all()
+
     if request.method == "POST":
-        comment_ = Comment(name=request.POST.get("en_name"),\
+        if "volunteerSummit" in request.POST:
+            v_form = Comment(name=request.POST.get("en_name"),\
                            email=request.POST.get("en_email"),\
                            content=request.POST.get("en_comment"),\
                            blog=request.POST.get("en_blog"))
-        comment_.save()
+            v_form.save()
+        elif "seekerSummit" in request.POST:
+            s_form = Post(name=request.POST.get("post_name"),\
+                        email=request.POST.get("post_email"),\
+                        content=request.POST.get("post_comment"),\
+                        blog=request.POST.get("post_blog"))
+            s_form.save()
+
     context = {
         "portfolios":portfolio,
         "blogs":blogs,
         "bio_images":bio,
         "comments":comments,
-        "projects":projects
+        "projects":projects,
+        "posts":Posts,
     }
     return render(request, 'personal/header.html', context)
 
@@ -74,3 +85,6 @@ def portfolio(request,name):
 #         "portfolio_other": portfolio_other
 #     }
 #     return render(request,'cn_portfolio_other.html',context)
+
+# def some_object_view(request, pk):
+#     Visits.objects.add_uri_visit(request, request.META["PATH_INFO"], APP_LABEL)

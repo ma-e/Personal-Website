@@ -1,16 +1,16 @@
-<div id="posts" class="section posts" >
-        <h3>Comments</h3>
+<div id="posts" class="section posts" style="background-color: white;" >
+        <h3 style="font-size: 2em;">Volunteers Posts</h3>
         <h6></h6>
         <form action="#posts" method="post">
           {% csrf_token %}
           <input type = "text" name = "en_name" placeholder = "name*"> </input>
           <input type = "text" name = "en_email" placeholder = "email*"> </input>
-          <input type = "text" name = "en_blog" placeholder = "website(optional)"> </input>
+          <input type = "text" name = "en_blog" placeholder = "zip code"> </input>
           <!-- <input class='comment-item' class='comment-content' type = "text" name = "comment" placeholder = "请输入您的评论*"> </input> -->
           <br>
-          <textarea class="comment" name = "en_comment" placeholder = "Please leave your comment here.*"></textarea>
+          <textarea class="comment" name = "en_comment" placeholder = "Please leave your message here.*"></textarea>
           <br>
-          <button type="submit"> Submit </button>
+          <button name="volunteerSummit" type="submit"> Submit </button>
         </form>
         {% for comment in comments %}
         <div class='comment-item'>

@@ -1,0 +1,21 @@
+<div id="seeker" class="section posts" style="background-color: white;">
+    <h1 style="font-size: 2em;  margin-top: 0px;"> Seeking for help</h1>
+    <h6></h6>
+    <form action="#posts" method="post">
+      {% csrf_token %}
+      <input type = "text" name = "post_name" placeholder = "Name*"> </input>
+      <input type = "text" name = "post_email" placeholder = "Email*"> </input>
+      <input type = "text" name = "post_blog" placeholder = "Zip Code*"> </input>
+      <!-- <input class='comment-item' class='comment-content' type = "text" name = "comment" placeholder = "请输入您的评论*"> </input> -->
+      <br>
+      <textarea class="comment" name = "post_comment" placeholder = "Please leave your message here.*"></textarea>
+      <br>
+      <button name="seekerSummit" type="submit"> Submit </button>
+    </form>
+    {% for post in posts %}
+    <div class='comment-item'>
+        <p>{{ post.content}}</p>
+        <h6>{{post.name}}&nbsp;&nbsp;{{post.date}}</h6>
+    </div>
+    {% endfor %}
+</div>

@@ -1,4 +1,6 @@
 from django.db import models
+from django.apps import apps
+
 
 class Portfolio(models.Model):
     portfolio_category = models.CharField(max_length=30)
@@ -92,6 +94,13 @@ class Portfolio_other(models.Model):
         return f"/{self.name}"
 
 class Comment(models.Model):
+    name = models.CharField(max_length=100,null=True)
+    email= models.CharField(max_length=100,null=True)
+    content = models.CharField(max_length=500,null=True)
+    blog = models.CharField(max_length=100,null=True)
+    date = date = models.DateField(auto_now_add=True, blank=True)
+
+class Post(models.Model):
     name = models.CharField(max_length=100,null=True)
     email= models.CharField(max_length=100,null=True)
     content = models.CharField(max_length=500,null=True)

@@ -39,6 +39,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'visits',
     'cn_vson',
     'personal',
     'django.contrib.admin',
@@ -57,9 +58,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # "visits.middleware.BotVisitorMiddleware",
+    # "visits.middleware.CounterMiddleware",
 ]
 
 ROOT_URLCONF = 'MyFirstWeb.urls'
+# IGNORE_USER_AGENTS = ["Wget/", "curl/"]
+# URI_WITH_GET_PARAMS=True
 
 TEMPLATES = [
     {
@@ -89,7 +94,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
