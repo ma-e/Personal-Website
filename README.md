@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 # Personal website
 # URL
 * www.maeema.com
